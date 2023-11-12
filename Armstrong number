@@ -1,0 +1,35 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package vivaq1;
+
+import java.util.Scanner;
+public class VIVAQ1 {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+       
+        System.out.print("Enter an integer: ");
+        int num=input.nextInt();
+        
+        int n=0, num1;
+        num1=num;
+        while(num1!=0){
+            num1 /= 10;
+            n++;
+        }
+ 
+        int sum=0, digit;
+        num1=num;
+        while(num1!=0){
+            digit = num1%10; 
+            sum += Math.pow(digit, n); 
+            num1 /= 10;
+        }
+        
+        if(sum==num){
+            System.out.println(num + " is an Armstrong number");}
+        else{
+            System.out.println(num + " is not an Armstrong number");}
+    }
+}
